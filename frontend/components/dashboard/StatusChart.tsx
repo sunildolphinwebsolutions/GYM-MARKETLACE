@@ -6,7 +6,7 @@ interface StatusChartProps {
     data: { name: string; value: number }[];
 }
 
-const COLORS = ['#10B981', '#FBBF24', '#EF4444']; // Emerald, Amber, Red
+const COLORS = ['#10B981', '#FBBF24', '#EF4444'];
 
 export default function StatusChart({ data }: StatusChartProps) {
     const chartData = data && data.length > 0 ? data : [
