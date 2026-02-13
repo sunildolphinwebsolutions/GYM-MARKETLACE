@@ -75,7 +75,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                         Sellers
                     </Link>
 
-                    <Link
+                    {/* <Link
                         href="/admin/approvals"
                         className={`group flex items-center px-4 py-3 text-sm font-medium rounded-md transition-colors ${isActive('/admin/approvals') ? 'bg-gray-800 text-brand-yellow' : 'text-gray-300 hover:bg-gray-800 hover:text-white'}`}
                         onClick={() => setIsSidebarOpen(false)}
@@ -84,7 +84,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         Approvals
-                    </Link>
+                    </Link> */}
 
 
                     <p className="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 mt-6">Management</p>

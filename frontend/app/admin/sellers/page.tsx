@@ -42,8 +42,8 @@ export default function SellersPage() {
                     <thead className="bg-gray-900">
                         <tr>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Name</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Email</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Joined Date</th>
+                            <th className="hidden md:table-cell px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Email</th>
+                            <th className="hidden md:table-cell px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Joined Date</th>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Gyms Owned</th>
                         </tr>
                     </thead>
@@ -59,13 +59,14 @@ export default function SellersPage() {
                         ) : (
                             sellers.map((seller) => (
                                 <tr key={seller.id} className="hover:bg-gray-750 transition-colors">
-                                    <td className="px-6 py-4 whitespace-nowrap text-white font-medium">
-                                        {seller.name}
+                                    <td className="px-6 py-4 whitespace-nowrap">
+                                        <div className="text-white font-medium">{seller.name}</div>
+                                        <div className="text-gray-400 text-sm md:hidden">{seller.email}</div>
                                     </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-gray-300">
+                                    <td className="hidden md:table-cell px-6 py-4 whitespace-nowrap text-gray-300">
                                         {seller.email}
                                     </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-gray-400 text-sm">
+                                    <td className="hidden md:table-cell px-6 py-4 whitespace-nowrap text-gray-400 text-sm">
                                         {new Date(seller.created_at).toLocaleDateString()}
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap text-brand-yellow font-bold">

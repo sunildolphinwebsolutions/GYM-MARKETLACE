@@ -35,8 +35,8 @@ export default function PaymentsPage() {
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Date</th>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Booking Info</th>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Total Amount</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Platform (Comm.)</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Gym Owner</th>
+                            <th className="hidden md:table-cell px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Platform (Comm.)</th>
+                            <th className="hidden md:table-cell px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Gym Owner</th>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Status</th>
                         </tr>
                     </thead>
@@ -63,10 +63,10 @@ export default function PaymentsPage() {
                                     <td className="px-6 py-4 whitespace-nowrap text-white font-bold">
                                         {payment.amount} XOF
                                     </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-green-400 font-medium">
+                                    <td className="hidden md:table-cell px-6 py-4 whitespace-nowrap text-green-400 font-medium">
                                         +{payment.commission_amount} XOF
                                     </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-blue-400 font-medium">
+                                    <td className="hidden md:table-cell px-6 py-4 whitespace-nowrap text-blue-400 font-medium">
                                         {payment.gym_owner_amount} XOF
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap">
